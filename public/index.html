@@ -1,0 +1,36 @@
+<!-- <html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+<div class="row">
+  <div class="col-5 mx-auto">
+    <script src="http://localhost:5000/cdn/formio.embed.js?src=http://localhost:5000/form/12345?"></script>
+  </div>
+</div>
+</body>
+</html> -->
+
+
+<html>
+  <head>
+    <link rel="stylesheet" href="http://localhost:5000/dependency/avesdo-styles.css">
+    <script src='http://localhost:5000/cdn/formio.full.min.js'></script>
+    <script type='text/javascript'>
+      window.onload = function() {
+        Formio.createForm(document.getElementById('avesdo-form'), 'http://localhost:5000/form/12345' ,{ }
+        ).then(function(form) {
+    form.on('submit', function(submission) {
+    form.emit('submitDone')
+    form.nosubmit = true;
+  });
+});};
+    </script>
+  </head>
+  <body>
+    <div class="row">
+        <div  class="col-5 mx-auto" id='avesdo-form'></div>
+    </div>
+  </body>
+</html> 

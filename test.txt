@@ -1,0 +1,1 @@
+{ "components": [ { "label": "First Name", "type": "textfield", "key": "firstName", "input": true, "tableView": true }, { "label": "Last Name", "type": "textfield", "key": "lastName", "input": true, "tableView": true }, { "type": "button", "label": "Submit", "key": "submit", "disableOnInvalid": true, "input": true, "tableView": false } ] }
